@@ -9,6 +9,7 @@ public class MoverPlayer : MonoBehaviour
     public float turnspeed;
     public bool canJump;
     public float forceJump;
+    public Transform _initialPosition;
     Rigidbody _rigidbody;
 
     void Start()
@@ -19,6 +20,14 @@ public class MoverPlayer : MonoBehaviour
     void Update()
     {
         MoveController();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+      if(other.CompareTag("Danger"))
+      {
+        transform.position=_initialPosition.position;
+      }
     }
     //Este metodo es para controlar el movimiento
     public void MoveController()
