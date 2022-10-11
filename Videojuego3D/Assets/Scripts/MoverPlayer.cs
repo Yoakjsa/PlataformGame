@@ -12,8 +12,9 @@ public class MoverPlayer : MonoBehaviour
 
     public Transform _initialPosition;
     public GameObject[] plataforms;
+    public bool isInGround;
 
-    Rigidbody _rigidbody;
+    private Rigidbody _rigidbody;
 
     void Start()
     {
@@ -25,14 +26,14 @@ public class MoverPlayer : MonoBehaviour
         MoveController();
     }
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-      if(other.CompareTag("Danger"))
+      if (other.CompareTag("Danger"))
       {
-        transform.position=_initialPosition.position;
+        transform.position = _initialPosition.position;
       }
 
-       if(other.CompareTag("PowerUpJump"))
+       if (other.CompareTag("PowerUpJump"))
       {
         canJump = true;
 
@@ -41,8 +42,21 @@ public class MoverPlayer : MonoBehaviour
         plataforms[1].GetComponent<Rigidbody>().useGravity = true;
         plataforms[1].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
-        Destroy(other.GameObject);
+        Destroy(other.gameObject);
       }
+
+if (other.CompareTag("Ground")) isInGround = true;
+
+    }
+
+    private void OnTriggerStay (Collider other)
+    {
+      if (other.CompareTag("Ground")) isInGround = true;
+    }
+
+    private void OnTriggetExit (Collider other)
+    {
+      if (other.CompareTag("Ground")) isInGround = false;
     }
     //Este metodo es para controlar el movimiento
     public void MoveController()
@@ -54,11 +68,12 @@ public class MoverPlayer : MonoBehaviour
         transform.Translate(0, 0, moveVertical * speed * Time.deltaTime);
         transform.Rotate(0, moveHorizontal, 0 * turnspeed * Time.deltaTime);
    
-   if (canJump)
+   //Este metodo es para saltar
+   if (canJump && isInGround)
      {
-    if(Input.GetKeyDown(KeyCode.Space))
+    if (Input.GetKeyDown(KeyCode.Space))
       {
-        _rigidbody.AddForce(Vector3.up*forceJump, ForceMode.Impulse); //(0,1,0)
+        _rigidbody.AddForce(Vector3.up * forceJump, ForceMode.Impulse);
       }
      }
     }
