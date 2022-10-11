@@ -322,3 +322,19 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 901.055850 seconds.
+  path: Assets/Materials/Materials/ice-cream-waffle-cone-texture-pink-wafer-background-vector.mat
+  artifactKey: Guid(b7ed425a9f2b109499322a72f2509833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Materials/ice-cream-waffle-cone-texture-pink-wafer-background-vector.mat using Guid(b7ed425a9f2b109499322a72f2509833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef5c5aae9726795e81eff50175bdb8b') in 0.096338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Materials/Materials/seamless-striped-pattern-with-diagonal-lines-candy-cane-texture-free-vector.mat
+  artifactKey: Guid(f5f2ad2221f55f045bb1c7a486eda5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Materials/seamless-striped-pattern-with-diagonal-lines-candy-cane-texture-free-vector.mat using Guid(f5f2ad2221f55f045bb1c7a486eda5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5808057e57254923e3e11ca6af0cde72') in 0.028824 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
