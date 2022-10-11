@@ -14,7 +14,7 @@ public class MoverPlayer : MonoBehaviour
     public GameObject[] plataforms;
     public bool isInGround;
 
-    private Rigidbody _rigidbody;
+    Rigidbody _rigidbody;
 
     void Start()
     {
