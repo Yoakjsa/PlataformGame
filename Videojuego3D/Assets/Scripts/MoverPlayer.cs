@@ -9,7 +9,10 @@ public class MoverPlayer : MonoBehaviour
     public float turnspeed;
     public bool canJump;
     public float forceJump;
+
     public Transform _initialPosition;
+    public GameObject[] plataforms;
+
     Rigidbody _rigidbody;
 
     void Start()
@@ -22,11 +25,23 @@ public class MoverPlayer : MonoBehaviour
         MoveController();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
       if(other.CompareTag("Danger"))
       {
         transform.position=_initialPosition.position;
+      }
+
+       if(other.CompareTag("PowerUpJump"))
+      {
+        canJump = true;
+
+        plataforms[0].GetComponent<Rigidbody>().useGravity = true;
+        plataforms[0].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        plataforms[1].GetComponent<Rigidbody>().useGravity = true;
+        plataforms[1].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+        Destroy(other.GameObject);
       }
     }
     //Este metodo es para controlar el movimiento
