@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoverPlayer : MonoBehaviour
 {
 
-    [Range(0, 15)]public float speed;
+    [Range(0, 15)] public float speed;
     public float turnspeed;
     public bool canJump;
     public float forceJump;
@@ -18,7 +18,7 @@ public class MoverPlayer : MonoBehaviour
 
     void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>(); 
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -28,37 +28,37 @@ public class MoverPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-      if (other.CompareTag("Danger"))
-      {
-        transform.position = _initialPosition.position;
-      }
+        if (other.CompareTag("Danger"))
+        {
+            transform.position = _initialPosition.position;
+        }
 
-       if (other.CompareTag("PowerUpJump"))
-      {
-        canJump = true;
+        if (other.CompareTag("PowerUpJump"))
+        {
+            canJump = true;
 
-        plataforms[0].GetComponent<Rigidbody>().useGravity = true;
-        plataforms[0].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        plataforms[1].GetComponent<Rigidbody>().useGravity = true;
-        plataforms[1].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            plataforms[0].GetComponent<Rigidbody>().useGravity = true;
+            plataforms[0].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            plataforms[1].GetComponent<Rigidbody>().useGravity = true;
+            plataforms[1].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
-        Destroy(other.gameObject);
-      }
-
-if (other.CompareTag("Ground")) isInGround = true;
-
+            Destroy(other.gameObject);
+        }
     }
 
-    private void OnTriggerStay (Collider other)
+    private void OnTriggerStay(Collider other)
+
     {
-      if (other.CompareTag("Ground")) isInGround = true;
+        if (other.CompareTag("Ground")) isInGround = true;
     }
 
-    private void OnTriggetExit (Collider other)
+    private void OnTriggerExit(Collider other)
     {
-      if (other.CompareTag("Ground")) isInGround = false;
+        if (other.CompareTag("Ground")) isInGround = false;
     }
+
     //Este metodo es para controlar el movimiento
+
     public void MoveController()
     {
 
@@ -67,14 +67,14 @@ if (other.CompareTag("Ground")) isInGround = true;
 
         transform.Translate(0, 0, moveVertical * speed * Time.deltaTime);
         transform.Rotate(0, moveHorizontal, 0 * turnspeed * Time.deltaTime);
-   
-   //Este metodo es para saltar
-   if (canJump && isInGround)
-     {
-    if (Input.GetKeyDown(KeyCode.Space))
-      {
-        _rigidbody.AddForce(Vector3.up * forceJump, ForceMode.Impulse);
-      }
-     }
+
+        //Este metodo es para saltar
+        if (canJump && isInGround)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _rigidbody.AddForce(Vector3.up * forceJump, ForceMode.Impulse);
+            }
+        }
     }
 }
