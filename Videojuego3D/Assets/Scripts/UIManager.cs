@@ -18,8 +18,10 @@ public class UIManager : MonoBehaviour
 
      private void Update()
      {
-        lifeIndicator.sprite=lifeSprites[gameManager.lifes];
-
+        if(lifeIndicator !=null)
+        {
+             lifeIndicator.sprite=lifeSprites[gameManager.lifes];
+        }
      }
 
      public void starGame()

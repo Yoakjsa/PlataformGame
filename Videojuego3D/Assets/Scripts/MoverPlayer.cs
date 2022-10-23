@@ -31,7 +31,7 @@ public class MoverPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Danger"))
+        if (other.CompareTag("Danger") && gameManager.lifes>0)
         {
             transform.position = _initialPosition.position;
             gameManager.lifes -=1;
