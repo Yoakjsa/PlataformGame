@@ -11,8 +11,11 @@ public class MoverPlayer : MonoBehaviour
     public float forceJump;
 
     public Transform _initialPosition;
+
     public GameObject[] plataforms;
     public bool isInGround;
+
+    [SerializeField] GameManager gameManager;
 
     Rigidbody _rigidbody;
 
@@ -31,6 +34,7 @@ public class MoverPlayer : MonoBehaviour
         if (other.CompareTag("Danger"))
         {
             transform.position = _initialPosition.position;
+            gameManager.lifes -=1;
         }
 
         if (other.CompareTag("PowerUpJump"))
@@ -45,6 +49,7 @@ public class MoverPlayer : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    //Este metodo es para detectar el piso
 
     private void OnTriggerStay(Collider other)
 
