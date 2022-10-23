@@ -22,6 +22,21 @@ public class UIManager : MonoBehaviour
         {
              lifeIndicator.sprite=lifeSprites[gameManager.lifes];
         }
+
+        if (panelController[0] !=null)
+        {
+             if(Input.GetKeyDown(KeyCode.P))
+             {
+                panelController[0].SetActive(true);
+                Time.timeScale=0;
+             }
+        }
+     }
+
+     public void QuitPause()
+     {
+         panelController[0].SetActive(false);
+         Time.timeScale=1;
      }
 
      public void starGame()
