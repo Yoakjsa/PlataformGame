@@ -412,3 +412,31 @@ Received Import Request.
   path: Assets/Scenes/Nevel2.unity
   artifactKey: Guid(84134ec86eb65e346b893aa014741a28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/Nevel2.unity using Guid(84134ec86eb65e346b893aa014741a28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02b6b71d31c7fed11639cbb416a1c835') in 0.005849 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 81.377812 seconds.
+  path: Assets/Scenes/Title.unity
+  artifactKey: Guid(0f6bd3eee49b5b042a48ad8d61031ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Title.unity using Guid(0f6bd3eee49b5b042a48ad8d61031ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8e785ae5e797bc2f04bc187dcfb9ea5') in 0.007241 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 715.576487 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
+  artifactKey: Guid(8a89fa14b10d46a99122fd4f73fca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset using Guid(8a89fa14b10d46a99122fd4f73fca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17efea26eaab76bb1bb1f1c72f9a2605') in 0.196260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16aa8d58a1fb0c42de0ba5c32fb10b59') in 0.034352 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset
+  artifactKey: Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset using Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20c006f342e47965a89dd6682c44cf6a') in 0.048855 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
