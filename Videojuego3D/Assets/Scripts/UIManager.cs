@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
              lifeIndicator.sprite=lifeSprites[gameManager.lifes];
         }
 
-        if (panelController[0] !=null)
+        if (panelController != null)
         {
              if(Input.GetKeyDown(KeyCode.P))
              {
