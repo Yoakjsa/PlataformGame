@@ -38,8 +38,6 @@ public class MoverPlayer : MonoBehaviour
         {
             transform.position = _initialPosition.position;
             gameManager.lifes -=1;
-            haveKey = false;
-            Instantiate(key, key.transform.position, Quaternion.identity);
   
         }
         if (other.CompareTag("Key"))
