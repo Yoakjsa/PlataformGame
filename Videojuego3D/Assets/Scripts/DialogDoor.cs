@@ -29,7 +29,7 @@ public class DialogDoor : MonoBehaviour
 
           if(Input.GetKey(KeyCode.K))
           {
-               openDoorAnim.SetBool("UseKey", true);
+               openDoorAnim.SetBool("Use Key", true);
                doorOpen=true;
           }
 

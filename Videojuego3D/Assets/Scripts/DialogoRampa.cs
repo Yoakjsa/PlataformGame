@@ -8,39 +8,44 @@ public class DialogoRampa : MonoBehaviour
        [SerializeField] TMP_Text dialogs;
        [SerializeField] GameObject dialogPanel;
        [SerializeField] GameManager gameManager;
-       [SerializeField] Animator plataformPink;
+       [SerializeField] Animator openDoorAnim;
 
-       bool movePlataform;
+       bool doorOpen;
 
      private void OnTriggerStay(Collider other)
      {
-          if(other.CompareTag("Player"))
+          if(other.CompareTag("PlayerDos"))
           {
                dialogPanel.SetActive(true);
-               if (gameManager.haveChocolate==false&&!movePlataform)
+               if (gameManager.haveChocolate==false&&!doorOpen)
                {
                     dialogs.text="¡Necesitas encontrar un chocolate!";
                }
                else 
                {
-                    dialogs.text="Presiona 'y' para subir";
+                    dialogs.text="Presiona 'k' para abrir la puerta";
                }
           }
 
-          if(Input.GetKey(KeyCode.Y))
+          if(Input.GetKey(KeyCode.K))
           {
-               plataformPink.SetBool("UseChocolate", true);
-               movePlataform=true;
+               openDoorAnim.SetBool("UseChocolate", true);
+               doorOpen=true;
+          }
+
+          if(doorOpen)
+          {
+          dialogs.text="¡Felicidades!, acabaste el juego, avanza para regresar al inicio";
           }
      
      }
 
      private void OnTriggerExit(Collider other)
      {
-          if(other.CompareTag("Player"))
+          if(other.CompareTag("PlayerDos"))
           {
                dialogPanel.SetActive(false);
           }
      }
-
 }
+

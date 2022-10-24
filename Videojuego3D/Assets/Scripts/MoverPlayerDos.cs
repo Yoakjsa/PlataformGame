@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoveNvl2 : MonoBehaviour
+public class MoverPlayerDos : MonoBehaviour
 {
     [Range(0, 15)] public float speed;
     public float turnspeed;
@@ -11,7 +11,6 @@ public class PlayerMoveNvl2 : MonoBehaviour
 
     public GameObject chocolate;
     public bool haveChocolate;
-
 
     public Transform _initialPosition;
     public GameObject[] plataforms;
@@ -31,8 +30,6 @@ public class PlayerMoveNvl2 : MonoBehaviour
         MoveController();
     }
 
-   //Este metodo es para restar vidas
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Danger") && gameManager.lifes>0)
@@ -41,17 +38,26 @@ public class PlayerMoveNvl2 : MonoBehaviour
             gameManager.lifes -=1;
   
         }
-
-            if (other.CompareTag("Chocolate"))
+        if (other.CompareTag("Chocolate"))
         {
             haveChocolate = true;
             Destroy(other.gameObject);
         }
 
-            if(other.CompareTag("Chocolate"))
+        if(other.CompareTag("Chocolate"))
         {
             gameManager.haveChocolate=true;
         }
+    }
+    private void OnTriggerStay(Collider other)
+
+    {
+        if (other.CompareTag("Ground")) isInGround = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Ground")) isInGround = false;
     }
 
     //Este metodo es para controlar el movimiento
