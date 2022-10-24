@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public int lifes=3;
-        public bool haveKey;
+    public bool haveKey;
+    public bool haveChocolate;
         
     // Start is called before the first frame update
     void Start()

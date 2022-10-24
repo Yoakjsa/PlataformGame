@@ -1825,6 +1825,7 @@ GameObject:
   - component: {fileID: 282508068}
   - component: {fileID: 282508067}
   - component: {fileID: 282508066}
+  - component: {fileID: 282508070}
   m_Layer: 0
   m_Name: GalletaRosa
   m_TagString: Untagged
@@ -1906,11 +1907,23 @@ Transform:
   m_LocalPosition: {x: -35.3, y: 13.7, z: 6.3}
   m_LocalScale: {x: 17.904257, y: 1, z: 18.264051}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1769441492}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &282508070
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282508065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.26
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &290934337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3413,6 +3426,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
   m_PrefabInstance: {fileID: 520588811}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &520762314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 520762317}
+  - component: {fileID: 520762316}
+  - component: {fileID: 520762315}
+  m_Layer: 0
+  m_Name: RampaPink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &520762315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520762314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac693c3fd238a3c41b620cc32fbb2979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs: {fileID: 1151274324}
+  dialogPanel: {fileID: 1080019551}
+  gameManager: {fileID: 2112432227}
+  plataformPink: {fileID: 1058198094}
+--- !u!95 &520762316
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520762314}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 65b5970a313f88946b7a234668bcb36b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &520762317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520762314}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -35.3, y: -0.33, z: -5.66}
+  m_LocalScale: {x: 5.560525, y: 0.31057, z: 5.6722665}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1058198093}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &522347438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4357,6 +4440,8 @@ MonoBehaviour:
   turnspeed: 7
   canJump: 1
   forceJump: 5
+  chocolate: {fileID: 0}
+  haveChocolate: 0
   _initialPosition: {fileID: 1514101085}
   plataforms: []
   isInGround: 1
@@ -4578,7 +4663,7 @@ Transform:
   - {fileID: 675485841}
   - {fileID: 440836221}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &715407242
 GameObject:
@@ -6791,6 +6876,7 @@ GameObject:
   - component: {fileID: 1058198091}
   - component: {fileID: 1058198090}
   - component: {fileID: 1058198094}
+  - component: {fileID: 1058198096}
   m_Layer: 0
   m_Name: PlataformaRosa
   m_TagString: Untagged
@@ -6868,13 +6954,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058198089}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.3, y: -0.33, z: -5.66}
-  m_LocalScale: {x: 5.560525, y: 0.31057, z: 5.6722665}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 520762317}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1058198094
 Animator:
@@ -6896,6 +6982,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!135 &1058198096
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058198089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.12
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1064954564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10292,7 +10391,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1523869848 stripped
 Transform:
@@ -10341,7 +10440,7 @@ Transform:
   - {fileID: 2069553876}
   - {fileID: 265764437}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1548901432
 PrefabInstance:
@@ -12418,9 +12517,10 @@ GameObject:
   - component: {fileID: 1769441495}
   - component: {fileID: 1769441494}
   - component: {fileID: 1769441493}
+  - component: {fileID: 1769441496}
   m_Layer: 0
   m_Name: Chocolate
-  m_TagString: Untagged
+  m_TagString: Chocolate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12432,13 +12532,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769441491}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.346, y: -10.89, z: 1.249}
-  m_LocalScale: {x: 0.0014869, y: 2.4380121, z: 0.052723642}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -41.494873, y: 2.8099995, z: 29.111801}
+  m_LocalScale: {x: 0.02662184, y: 2.4380121, z: 0.9629473}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 282508069}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1769441493
 BoxCollider:
@@ -12503,6 +12603,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769441491}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &1769441496
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769441491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.05
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1796864613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13147,7 +13260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1943625249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14176,6 +14289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifes: 3
   haveKey: 0
+  haveChocolate: 0
 --- !u!4 &2112432228
 Transform:
   m_ObjectHideFlags: 0

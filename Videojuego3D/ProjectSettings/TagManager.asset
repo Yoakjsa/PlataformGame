@@ -10,6 +10,7 @@ TagManager:
   - PowerDoor
   - Key
   - PlayerDos
+  - Chocolate
   layers:
   - Default
   - TransparentFX

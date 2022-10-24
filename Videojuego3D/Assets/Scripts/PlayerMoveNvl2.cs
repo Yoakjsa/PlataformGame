@@ -9,6 +9,10 @@ public class PlayerMoveNvl2 : MonoBehaviour
     public bool canJump;
     public float forceJump;
 
+    public GameObject chocolate;
+    public bool haveChocolate;
+
+
     public Transform _initialPosition;
     public GameObject[] plataforms;
     public bool isInGround;
@@ -36,6 +40,17 @@ public class PlayerMoveNvl2 : MonoBehaviour
             transform.position = _initialPosition.position;
             gameManager.lifes -=1;
   
+        }
+
+            if (other.CompareTag("Chocolate"))
+        {
+            haveChocolate = true;
+            Destroy(other.gameObject);
+        }
+
+            if(other.CompareTag("Chocolate"))
+        {
+            gameManager.haveChocolate=true;
         }
     }
 
