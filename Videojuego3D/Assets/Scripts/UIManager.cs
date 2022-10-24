@@ -37,8 +37,4 @@ public class UIManager : MonoBehaviour
          Time.timeScale=1;
      }
 
-     public void starGame()
-     {
-         SceneManager.LoadScene(1);
-     }
 }

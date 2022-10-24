@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - PowerDoor
   - Key
+  - PlayerDos
   layers:
   - Default
   - TransparentFX
