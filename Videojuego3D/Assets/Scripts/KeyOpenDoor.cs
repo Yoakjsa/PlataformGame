@@ -21,7 +21,7 @@ public class KeyOpenDoor : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            doorToOpen.isUnlocked=true;
+            doorToOpen.isUnlocked=false;
         }
 
         Destroy(gameObject);

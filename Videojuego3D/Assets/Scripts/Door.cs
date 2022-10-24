@@ -22,10 +22,10 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isUnlocked && door.position !=targetPosition)
+        if(isUnlocked&&door.position!=targetPosition)
         {
             door.transform.position=Vector3.Lerp(door.transform.position, targetPosition, time);
-            time = Time.deltaTime * doorSpeed;
+            time+=Time.deltaTime*doorSpeed;
 
         }
     }
@@ -34,7 +34,15 @@ public class Door : MonoBehaviour
     {
         if(other.tag=="Player")
         {
-            targetPosition = openTransform.position;
+            targetPosition=openTransform.position;
+        }
+    }
+
+        private void OnTriggerExit(Collider other)
+    {
+        if(other.tag=="Player")
+        {
+            targetPosition=closeTransform.position;
         }
     }
 }
