@@ -8,6 +8,7 @@ TagManager:
   - PowerUpJump
   - Ground
   - PowerDoor
+  - Key
   layers:
   - Default
   - TransparentFX

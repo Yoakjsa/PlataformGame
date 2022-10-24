@@ -14,8 +14,6 @@ public class UIManager : MonoBehaviour
 
    [SerializeField] GameObject[] panelController;
 
-   [SerializeField] TMP_Text[] dialogs;
-
      private void Update()
      {
         if(lifeIndicator !=null)

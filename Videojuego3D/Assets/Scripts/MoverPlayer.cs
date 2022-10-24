@@ -10,6 +10,9 @@ public class MoverPlayer : MonoBehaviour
     public bool canJump;
     public float forceJump;
 
+    public GameObject key;
+    public bool haveKey;
+
     public Transform _initialPosition;
 
     public GameObject[] plataforms;
@@ -35,6 +38,14 @@ public class MoverPlayer : MonoBehaviour
         {
             transform.position = _initialPosition.position;
             gameManager.lifes -=1;
+            haveKey = false;
+            Instantiate(key, key.transform.position, Quaternion.identity);
+  
+        }
+        if (other.CompareTag("Key"))
+        {
+            haveKey = true;
+            Destroy(other.gameObject);
         }
 
         if (other.CompareTag("PowerUpJump"))
@@ -47,6 +58,11 @@ public class MoverPlayer : MonoBehaviour
             plataforms[1].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
             Destroy(other.gameObject);
+        }
+
+        if(other.CompareTag("Key"))
+        {
+            gameManager.haveKey=true;
         }
     }
     //Este metodo es para detectar el piso
