@@ -9986,7 +9986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1210973057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10056,6 +10056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1218496594}
   - component: {fileID: 1218496593}
+  - component: {fileID: 1218496595}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -10091,6 +10092,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1218496595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218496592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8ba95e7ed79634da355a62ed0d12df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifes: 3
 --- !u!1 &1251834904
 GameObject:
   m_ObjectHideFlags: 0
@@ -10123,9 +10137,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5606eda53ecccb34cb42b6057c282da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  lifeIndicator: {fileID: 0}
-  lifeSprites: []
+  gameManager: {fileID: 1218496593}
+  lifeIndicator: {fileID: 1790193464}
+  lifeSprites:
+  - {fileID: -1815450397, guid: 6b0704555409e9141b219c1cfcd72e1b, type: 3}
+  - {fileID: 471460619, guid: 6b0704555409e9141b219c1cfcd72e1b, type: 3}
+  - {fileID: 2020664161, guid: 6b0704555409e9141b219c1cfcd72e1b, type: 3}
+  - {fileID: -313081868, guid: 6b0704555409e9141b219c1cfcd72e1b, type: 3}
   panelController: []
   dialogs: []
 --- !u!114 &1251834906
@@ -10686,7 +10704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1293222521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12388,7 +12406,7 @@ RectTransform:
   m_GameObject: {fileID: 1790193462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.85861, y: 0.85861, z: 0.85861}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 257418971}
@@ -12539,8 +12557,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pause
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 92546d36776a604438a3551faa8f5b99, type: 2}
-  m_sharedMaterial: {fileID: 5815582864412454976, guid: 92546d36776a604438a3551faa8f5b99, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
