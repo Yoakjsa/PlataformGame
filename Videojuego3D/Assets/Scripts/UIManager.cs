@@ -14,7 +14,12 @@ public class UIManager : MonoBehaviour
 
    [SerializeField] GameObject[] panelController;
 
-     private void Update()
+    public void StarGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    private void Update()
      {
         if(lifeIndicator !=null)
         {
